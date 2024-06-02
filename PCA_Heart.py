@@ -52,7 +52,6 @@ data_encoded = pd.concat([updated_df.drop(columns=columns_to_encode), encoded_da
 y = data_encoded['HeartDisease']
 data_encoded.drop('HeartDisease', axis=1, inplace=True)
 
-# testing dataannotation
 numeric_columns = data_encoded.select_dtypes(include=['number']).columns
 data_numeric = data_encoded[numeric_columns]
 
